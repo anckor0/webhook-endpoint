@@ -14,6 +14,7 @@ app.get('/', (req,res) => {
 
 app.post('/webhook', (req, res) => {
     const event = req.body;
+    console.log('/webhook');
     try {
         Webhook.verifySigHeader(event, signature, process.env.CBase_SECRET);
         console.log('Successfully verified');
