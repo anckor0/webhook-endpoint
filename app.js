@@ -9,6 +9,7 @@ app.use(bodyParser.json());
 app.get('/', (req,res) => {
     console.log('is live / ')
     // res.render('index.html', {})
+    res.status('200')
 })
 
 app.post('/webhook', (req, res) => {
